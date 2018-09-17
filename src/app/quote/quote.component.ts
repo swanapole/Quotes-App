@@ -30,6 +30,15 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
+  voteAdd(vote,index){
+    if(vote){
+      this.quotes[index].upVote += 1;
+      this.getHighest();
+    } else {
+      this.quotes[index].downVote += 1;
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {
