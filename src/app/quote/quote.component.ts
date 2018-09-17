@@ -11,6 +11,24 @@ export class QuoteComponent implements OnInit {
   private id:number=0;
   quotes:Quote[]= [];
 
+  quoteDelete(isDelete,index){
+    if(isDelete){
+      let toDelete = confirm(`Are you sure you want to delete this quote?`);
+      if(toDelete){
+        this.quotes.splice(index, 1);
+        this.getHighest();
+      }
+    }
+  }
+
+  postNewQuote(quote){
+    this.id+=1;
+    quote.id = this.id;
+    this.timer=setInterval(()=>{
+        quote.time+=1;
+    },1000);
+    this.quotes.push(quote);
+  }
 
   constructor() { }
 
