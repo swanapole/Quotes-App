@@ -1,0 +1,11 @@
+<h6>Posted by: {{quote.submitter}} {{quote.time | timeCounter}}</h6>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-default" (click)="addVote(true)"><i class="far fa-thumbs-up"></i><span>{{quote.upVote}}</span></button>
+  </div>
+  <div class="col-md-6">
+    <button class="btn btn-default" (click)="addVote(false)"><i class="far fa-thumbs-down"></i><span>{{quote.downVote}}</span></button>
+  </div>
+</div>
+<br>
+<button class="btn btn-default" (click)='deleteGoal(true)'>Delete Quote</button>
