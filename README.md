@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 By Maryann Gitonga
 
-##Description
+## Description
 
 This project allows one to create quotes, display them, give them up votes or down votes them and delete them.
 
