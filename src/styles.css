@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+  background-color: #082845;
+  color: #fff;
+}
+button{
+  color: #082845;
+  background-color: #fff;
+  border: none;
+}
+button i{
+  font-size: 20px;
+}
+.jumbotron{
+  background-color: #fff;
+  color: #082845;
+}
+.panel{
+  padding-bottom: 25px;
+}
