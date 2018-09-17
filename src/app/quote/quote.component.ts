@@ -39,6 +39,30 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+  getHighest(){
+    let highest = 0;
+    let highestQuote:Quote;
+    for(let quote of this.quotes){ //Stores highest quote
+      if(quote.upVote>highest){
+        highest=quote.upVote;
+        highestQuote=quote;
+      }
+    }
+    console.log(highestQuote);
+    this.getId(highestQuote);
+  }
+
+  getId(change:Quote){
+     for(let quote of this.quotes){
+       if(quote.id==change.id){
+         quote.highest=true;
+       }
+       else{
+         quote.highest=false;
+       }
+     }
+  }
+
   constructor() { }
 
   ngOnInit() {
