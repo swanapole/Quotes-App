@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-6" *ngFor="let quote of quotes; let i = index">
+        <div [appHighlight]='quote.highest'>
+            <h4>Quote:</h4>
+            <h5>
+              <i>"{{quote.quoting}}"</i> <br><br><span class="text-center">&mdash; {{quote.author}}</span>
+            </h5>
+            <app-quote-details [quote]='quote' (isDelete)='quoteDelete($event,i)' (vote)='voteAdd($event,i)'></app-quote-details>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
